@@ -69,17 +69,20 @@ class _OrderListPageState extends State<OrderListPage> {
       }
     }
   }
-@override
+
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
     getData();
   }
+
   @override
   Widget build(BuildContext context) {
-    return   const Scaffold(
-
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+    return const Scaffold(
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -87,17 +90,15 @@ class _OrderListPageState extends State<OrderListPage> {
           children: [
             Card(
               elevation: 5, // Set the elevation to 8 (adjust as needed)
-              child: SizedBox(
-                height: 210,
-                width: 152,
-                // Your content inside the card
-                child: Text('Example Card'),
+              child: ListTile(
+                leading: Icon(Icons.add),
+                trailing: Icon(Icons.arrow_forward),
+                title: Text('Example Card'),
               ),
             ),
-
-
           ],
         ),
-      ),);
+      ),
+    );
   }
 }

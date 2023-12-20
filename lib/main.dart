@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
 print(prefs.get("TOKEN"));
                 if (mounted) setState(() {});
               },
-              child: Text('Looks like a RaisedButton'),
+              child: const Text('Looks like a RaisedButton'),
             ),
             SizedBox(height: 20,),
             ElevatedButton(
